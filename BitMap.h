@@ -23,3 +23,5 @@ class BitMap
   byte rows;  //Not currently used ( could check y  < rows )
   byte *bmap;
 };
+
+#endif
