@@ -3,7 +3,7 @@
 
 
 
-BitMap::BitMap(byte rows,byte cols) {
+BitMap::BitMap(byte cols,byte rows) {
 this->cols=cols;
 this->rows=rows;  
 bmap = new byte[1+(cols*rows)/8];
