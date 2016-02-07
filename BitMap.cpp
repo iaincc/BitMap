@@ -31,7 +31,7 @@ void BitMap::dump(){
 bool BitMap::get(byte x, byte y){
 
   int bit=y+x*rows;
-  byte B = *(bmap+ bit>>3);   
+  byte B = *(bmap + (bit>>3) );   
   bit = (1 << (bit & 0x07) );
   return B & bit; 
 
@@ -40,7 +40,7 @@ bool BitMap::get(byte x, byte y){
 void BitMap::put(bool V,byte x, byte y){
 
   int bit=y+x*rows;
-  byte* B = bmap+ bit>>3;  
+  byte* B = bmap + (bit>>3);  
   bit = (1 << (bit & 0x07) );
 
   if ( V ) { *B |= bit;
